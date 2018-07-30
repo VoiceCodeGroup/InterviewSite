@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voice to Code Interview</title>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* Style the header */
+    .header {
+        padding: 80px;
+        text-align: center;
+        /* background: #1abc9c; */
+        background: white;
+        color: black;
+    }
+    .footer {
+        padding: 80px;
+        text-align: center;
+        /* background: #1abc9c; */
+        background: white;
+        color: black;
+    }
+    .ListContainer {
+        padding: 1rem;
+        /* background-color: #1abc9c; */
+        background: white;
+        color:black;
+    }
+    .item {
+        text-align:center;  
+        background-color: white;
+        padding:1rem;   
+        color: black;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        height: 200px;
+    }
+    .box {
+        margin:auto;
+        width:100px;
+        height:100px;
+    }
+    .red{
+        background:red;
+    }
+    .styledText{
+        color: blue;
+        font-style: italic;
+    }
+    button {
+        height:60px;
+        width:480px;
+    }
+    .styledBtn{
+        color:orange;
+        background-color:purple;
+        border-radius:50px;
+    }
+    #inputLabel{
+        color:black;
+        font-size:10px;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Coding with voice interview</h1> 
+    <p>An interview looking at the variants of voice coding commands</p>
+</div>
+<!-- <br> -->
+<div class="ListContainer">
+
+    1.
+    <div class="item">
+            <div><h1>This is some heading 1 text</h1></div>
+    </div>
+
+    <br>
+
+    2.
+    <div class="item">
+            <div> <button></button>  </div>
+    </div>
+
+    <br>
+
+    3.
+    <div class="item">
+            <div> <button><h1>This is a button with some heading 1 text</h1></button>  </div>
+    </div>
+
+    <br>
+
+    4.
+    <div class="item">
+            <div class="box red"></div>
+    </div>
+
+    <br>
+
+    5.
+    <div class="item">
+            <div> <p class="styledText"> This is some styled text</p></div>
+    </div>
+
+    <br>
+
+    6.
+    <div class="item">
+            <div><button class="styledBtn"> This is a styled button</button></div>
+    </div>
+
+    <br>
+
+    7.
+    <div class="item">
+        <button class="clickButton" id="click">On click changes colour</button>
+    </div>
+
+    <br>
+
+    8.
+    <div class="item">
+        <button class="mouseButton" id="hover">On mouse hover changes height</button>
+    </div>
+
+    <br>
+
+    9.
+    <div class="item">
+        <label id="inputLabel">On text change (pressing enter) changes text colour</label>
+        <input id="textChange"></input>
+    </div>
+</div>
+<!-- <br> -->
+<div class="footer">
+    <p>All done</p>
+
+</div>
+
+
+</body>
+<script>
+        var isClicked = false;
+        document.getElementById("click").addEventListener("click", function(){
+            isClicked = !isClicked;
+            let color = isClicked ? "red" : "white";
+            document.getElementById("click").style.background = color;
+        });
+        document.getElementById("hover").addEventListener("mouseover", function(){
+            document.getElementById("hover").style.height = "100px";
+        });
+        document.getElementById("hover").addEventListener("mouseout", function(){
+            document.getElementById("hover").style.height = "18px";
+        });
+        document.getElementById("textChange").addEventListener("change", function(){
+            document.getElementById("textChange").style.color = "red";
+        });
+    </script>
+</html>
